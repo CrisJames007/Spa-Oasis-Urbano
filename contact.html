@@ -4,11 +4,9 @@
   <meta charset='utf-8'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Oasis Urbano Spa | Contacto</title>
-  
   <link rel="icon" sizes="192x192" href="static.wixstatic.com/shapes/0f001e_ac31e9bd2e4f41b7afe7d296054d36cc.svg" type="image/svg+xml"/>
   <link rel="shortcut icon" href="static.wixstatic.com/shapes/0f001e_ac31e9bd2e4f41b7afe7d296054d36cc.svg" type="image/svg+xml"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  
   <style data-url="static.parastorage.com/services/wix-thunderbolt/dist/main.46d95940.min.css">/* ... */ :root{--one-unit:1vw;--section-max-width:9999px;}</style>
   <style data-url="static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.25146d00.min.css">/* ... */ body{font-family:Arial,Helvetica,sans-serif;}</style>
   
@@ -17,45 +15,33 @@
     body { font-family: 'Lato', sans-serif; background-color: var(--secondary); color: var(--text-dark); margin: 0; padding: 0; }
     h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--primary); }
     a { text-decoration: none; transition: 0.4s ease; }
-
     /* HEADER */
     .SITE_HEADER { background-color: var(--bg-white); box-shadow: 0 4px 20px rgba(27, 75, 67, 0.05); }
     nav ul li a { color: var(--primary) !important; font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; position: relative; }
     nav ul li a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--accent); transition: width 0.3s; }
     nav ul li a:hover::after { width: 100%; }
-
     /* GRID CONTACTO */
     .contact-wrapper { display: flex; flex-wrap: wrap; max-width: 1100px; margin: 60px auto; box-shadow: 0 20px 50px rgba(0,0,0,0.1); background: white; }
-    
     .contact-info { flex: 1; min-width: 300px; background-color: var(--primary); color: white; padding: 60px 40px; position: relative; overflow: hidden; }
-    .contact-info::before {
-       /* Decoración hoja sutil */
-       content: ''; position: absolute; bottom: -50px; right: -50px; width: 200px; height: 200px;
-       background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%;
-    }
-    
+    .contact-info::before { content: ''; position: absolute; bottom: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%; }
     .contact-map { flex: 1.5; min-width: 350px; min-height: 500px; position: relative; }
-    
     .info-item { margin-bottom: 40px; }
     .info-item h3 { color: var(--accent); font-size: 24px; margin-bottom: 10px; }
     .info-item p { font-size: 16px; color: #e0e0e0; margin: 5px 0; }
-
-    .btn-whatsapp {
-      display: inline-block; background-color: var(--accent); color: white; padding: 12px 30px;
-      font-family: 'Playfair Display', serif; border: 1px solid var(--accent); margin-top: 10px;
-    }
+    .btn-whatsapp { display: inline-block; background-color: var(--accent); color: white; padding: 12px 30px; font-family: 'Playfair Display', serif; border: 1px solid var(--accent); margin-top: 10px; }
     .btn-whatsapp:hover { background-color: transparent; color: var(--accent); }
-
     /* FOOTER */
     .wixui-footer { background-color: var(--primary) !important; color: var(--secondary) !important; border-top: 5px solid var(--accent); padding: 60px 20px; text-align: center; }
-    
-    /* MUSIC */
+    /* PLAYER */
     .music-player { position: fixed; bottom: 30px; right: 30px; background: rgba(255,255,255,0.9); padding: 10px; border-radius: 50%; box-shadow: 0 5px 15px rgba(0,0,0,0.2); border: 1px solid var(--accent); z-index: 99; }
-    .play-btn { width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--primary); color: white; cursor: pointer; }
+    .play-btn { width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--primary); color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; }
   </style>
 </head>
 
 <body class="device-mobile-optimized">
+  <audio id="bgMusic" loop><source src="lofcosmos-midnight-notes-lofi-272341.mp3" type="audio/mpeg"></audio>
+  <div class="music-player"><button class="play-btn" onclick="toggleMusic()" id="playBtn">▶</button></div>
+
   <div id="SITE_CONTAINER">
     <header id="SITE_HEADER" class="SITE_HEADER wixui-header">
       <div class="comp-kriwpvah">
@@ -75,37 +61,31 @@
     </header>
 
     <main id="PAGES_CONTAINER" tabindex="-1">
-      
       <div class="contact-wrapper">
         <div class="contact-info">
           <h2 style="color: white; font-size: 36px; margin-bottom: 40px;">Visítanos</h2>
-          
           <div class="info-item">
             <h3>Dirección</h3>
             <p>Calle Yuracaré Esq. Avenida Thunupa</p>
             <p>Zona Sarcobamba</p>
             <p>Cochabamba, Bolivia</p>
           </div>
-          
           <div class="info-item">
             <h3>Contacto Directo</h3>
             <p>¿Lista para tu momento de relax?</p>
             <p style="font-size: 20px; color: white;">788-87983</p>
             <a href="https://wa.me/59178887983" class="btn-whatsapp" target="_blank">Chat en WhatsApp</a>
           </div>
-
           <div class="info-item">
             <h3>Horarios</h3>
             <p>Lunes a Sábado: Con Cita Previa</p>
             <p>Domingo: Cerrado</p>
           </div>
         </div>
-
         <div class="contact-map">
           <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.411696568265!2d-66.1820!3d-17.3910!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIzJzI3LjYiUyA2NsKwMTAnNTUuMiJX!5e0!3m2!1ses!2sbo!4v1675200000000!5m2!1ses!2sbo" allowfullscreen></iframe>
         </div>
       </div>
-
     </main>
 
     <footer id="SITE_FOOTER" class="wixui-footer">
@@ -114,8 +94,6 @@
     </footer>
   </div>
 
-  <audio id="bgMusic" loop crossorigin="anonymous"><source src="https://ia800504.us.archive.org/33/items/ErikSatieGymnopedieNo1/ErikSatieGymnopedieNo1.mp3" type="audio/mpeg"></audio>
-  <div class="music-player"><button class="play-btn" onclick="toggleMusic()" id="playBtn">▶</button></div>
   <script>
     var music = document.getElementById("bgMusic"); var btn = document.getElementById("playBtn"); var isPlaying = false; music.volume = 0.5;
     function toggleMusic() { if (isPlaying) { music.pause(); btn.innerHTML = "▶"; isPlaying = false; } else { music.play(); btn.innerHTML = "❚❚"; isPlaying = true; } }
