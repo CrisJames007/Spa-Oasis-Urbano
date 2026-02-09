@@ -14,12 +14,118 @@
   <style data-url="../static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.25146d00.min.css">/* ... (Renderer CSS) ... */ body{font-family:Arial,Helvetica,sans-serif;}</style>
   
   <style>
-    :root { --primary-color: #151945; --accent-color: #B7BDEF; }
-    .story-container { max-width: 800px; margin: 0 auto; padding: 40px 20px; text-align: center; }
-    .story-text { font-size: 18px; line-height: 1.8; color: #444; margin-bottom: 30px; text-align: left; }
-    .highlight-box { background: #fdfdfd; border-left: 5px solid var(--primary-color); padding: 20px; margin: 30px 0; text-align: left; }
-    .team-highlight { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; }
-    .member { background: #fff; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); width: 300px; border-radius: 8px; }
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* VARIABLES DE COLOR - EL ALMA DEL OASIS */
+    :root {
+      --primary: #1B4B43;    /* Verde Oasis Profundo */
+      --secondary: #F2EFE9;  /* Arena/Crema suave */
+      --accent: #C5A059;     /* Dorado Mate Elegante */
+      --text-dark: #2C3531;  /* Gris oscuro casi negro */
+      --text-light: #FFFFFF;
+      --bg-white: #FFFFFF;
+    }
+
+    /* LIMPIEZA GENERAL */
+    body {
+      font-family: 'Lato', sans-serif; /* Texto limpio para leer */
+      background-color: var(--secondary); /* Fondo general color arena suave */
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', serif; /* Títulos elegantes */
+      color: var(--primary);
+      margin-top: 0;
+    }
+
+    a { text-decoration: none; transition: 0.3s; }
+
+    /* HEADER / MENÚ */
+    .SITE_HEADER {
+      background-color: var(--bg-white);
+      box-shadow: 0 2px 15px rgba(27, 75, 67, 0.08); /* Sombra verde muy sutil */
+      padding-bottom: 10px;
+    }
+    
+    /* Enlaces del menú */
+    nav ul li a {
+      color: var(--primary) !important;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    nav ul li a:hover {
+      color: var(--accent) !important; /* Se pone dorado al pasar el mouse */
+    }
+
+    /* SECCIÓN HERO (Imagen Principal) */
+    .hero-text-box {
+      background-color: rgba(27, 75, 67, 0.85); /* Verde con transparencia */
+      padding: 50px;
+      border: 1px solid var(--accent); /* Borde dorado fino */
+      color: var(--text-light);
+      max-width: 600px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .hero-text-box h2 { color: var(--accent); } /* Título dorado */
+    .hero-text-box p { color: #f0f0f0; }
+
+    /* BOTONES ELEGANTES */
+    .btn-elegant {
+      background-color: var(--accent);
+      color: var(--text-light) !important;
+      padding: 15px 35px;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 18px;
+      border-radius: 2px; /* Bordes poco redondeados son más elegantes */
+      display: inline-block;
+      margin-top: 20px;
+      border: 1px solid var(--accent);
+    }
+    .btn-elegant:hover {
+      background-color: transparent;
+      color: var(--accent) !important;
+    }
+
+    /* TARJETAS (Equipo, Servicios) */
+    .team-card, .service-category {
+      background: var(--bg-white);
+      border-top: 4px solid var(--primary); /* Detalle verde arriba */
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave de alta calidad */
+      transition: transform 0.3s ease;
+    }
+    .team-card:hover {
+      transform: translateY(-5px); /* Se levanta un poco al pasar el mouse */
+    }
+    
+    /* LISTAS DE SERVICIOS */
+    .service-list li::before {
+      content: "✦"; /* Cambiamos el check por una estrella/diamante */
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-size: 18px;
+    }
+
+    /* FOOTER */
+    .wixui-footer {
+      background-color: var(--primary) !important;
+      color: var(--secondary) !important;
+      border-top: 5px solid var(--accent);
+    }
+    .wixui-footer a { color: var(--accent) !important; }
   </style>
 </head>
 
@@ -107,3 +213,4 @@
   </div>
 </body>
 </html>
+
