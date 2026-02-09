@@ -4,93 +4,46 @@
   <meta charset='utf-8'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Oasis Urbano Spa | Nosotros</title>
-  
   <link rel="icon" sizes="192x192" href="static.wixstatic.com/shapes/0f001e_ac31e9bd2e4f41b7afe7d296054d36cc.svg" type="image/svg+xml"/>
   <link rel="shortcut icon" href="static.wixstatic.com/shapes/0f001e_ac31e9bd2e4f41b7afe7d296054d36cc.svg" type="image/svg+xml"/>
-  
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
   <style data-url="static.parastorage.com/services/wix-thunderbolt/dist/main.46d95940.min.css">/* ... */ :root{--one-unit:1vw;--section-max-width:9999px;}</style>
   <style data-url="static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.25146d00.min.css">/* ... */ body{font-family:Arial,Helvetica,sans-serif;}</style>
   
   <style>
-    /* --- DISEÑO OASIS GLOBAL --- */
-    :root {
-      --primary: #1B4B43;
-      --secondary: #F2EFE9;
-      --accent: #C5A059;
-      --text-dark: #2C3531;
-      --text-light: #FFFFFF;
-      --bg-white: #FFFFFF;
-    }
+    :root { --primary: #1B4B43; --secondary: #F2EFE9; --accent: #C5A059; --text-dark: #2C3531; --bg-white: #FFFFFF; }
     body { font-family: 'Lato', sans-serif; background-color: var(--secondary); color: var(--text-dark); margin: 0; padding: 0; line-height: 1.8; }
     h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; color: var(--primary); margin-top: 0; }
     a { text-decoration: none; transition: 0.4s ease; }
-
     /* HEADER */
     .SITE_HEADER { background-color: var(--bg-white); box-shadow: 0 4px 20px rgba(27, 75, 67, 0.05); padding-bottom: 10px; }
     nav ul li a { color: var(--primary) !important; font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; position: relative; }
     nav ul li a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--accent); transition: width 0.3s; }
     nav ul li a:hover::after { width: 100%; }
-
-    /* HERO SECTION ESPECÍFICO PARA 'NOSOTROS' */
-    .hero-about {
-      position: relative; height: 50vh; min-height: 400px;
-      display: flex; align-items: center; justify-content: center;
-      background-color: var(--primary); overflow: hidden;
-    }
-    .hero-about::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-      /* Imagen de velas/relax */
-      background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1920&auto=format&fit=crop');
-      background-size: cover; background-position: center;
-      filter: blur(2px) brightness(0.6); transform: scale(1.05);
-    }
-    .page-title {
-      position: relative; z-index: 2; color: var(--text-light); text-align: center;
-      border: 1px solid var(--accent); padding: 40px 80px;
-      background: rgba(27, 75, 67, 0.6); backdrop-filter: blur(5px);
-    }
+    /* HERO */
+    .hero-about { position: relative; height: 50vh; min-height: 400px; display: flex; align-items: center; justify-content: center; background-color: var(--primary); overflow: hidden; }
+    .hero-about::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1920&auto=format&fit=crop'); background-size: cover; background-position: center; filter: blur(2px) brightness(0.6); transform: scale(1.05); }
+    .page-title { position: relative; z-index: 2; color: white; text-align: center; border: 1px solid var(--accent); padding: 40px 80px; background: rgba(27, 75, 67, 0.6); backdrop-filter: blur(5px); }
     .page-title h2 { color: var(--accent); font-size: 48px; margin: 0; font-style: italic; }
-
     /* CONTENIDO */
     .story-container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
     .story-text { font-size: 18px; color: #444; margin-bottom: 40px; text-align: justify; }
-    .highlight-box { 
-      background: var(--bg-white); border-left: 5px solid var(--accent); 
-      padding: 30px; margin: 40px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
-    }
-
-    /* EQUIPO */
+    .highlight-box { background: var(--bg-white); border-left: 5px solid var(--accent); padding: 30px; margin: 40px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
     .team-highlight { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 60px; }
-    .member { 
-      background: var(--bg-white); padding: 40px; 
-      box-shadow: 0 15px 40px rgba(0,0,0,0.08); width: 320px; 
-      border-top: 4px solid var(--primary); text-align: center;
-      transition: transform 0.3s;
-    }
+    .member { background: var(--bg-white); padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); width: 320px; border-top: 4px solid var(--primary); text-align: center; transition: transform 0.3s; }
     .member:hover { transform: translateY(-10px); }
-    .member-initial {
-      width: 90px; height: 90px; background: var(--secondary); color: var(--primary);
-      border: 2px solid var(--accent); border-radius: 50%; 
-      margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center; 
-      font-family: 'Playfair Display', serif; font-size: 36px; font-weight: bold;
-    }
-
+    .member-initial { width: 90px; height: 90px; background: var(--secondary); color: var(--primary); border: 2px solid var(--accent); border-radius: 50%; margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 36px; font-weight: bold; }
     /* FOOTER */
     .wixui-footer { background-color: var(--primary) !important; color: var(--secondary) !important; border-top: 5px solid var(--accent); padding: 60px 20px; text-align: center; }
-    .wixui-footer a { color: var(--accent) !important; }
-
-    /* MUSIC PLAYER */
-    .music-player { position: fixed; bottom: 30px; right: 30px; background: rgba(255, 255, 255, 0.95); padding: 10px 20px; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 10px; border: 1px solid var(--accent); z-index: 9999; }
-    .play-btn { background: var(--primary); color: white; border: none; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+    /* PLAYER */
+    .music-player { position: fixed; bottom: 30px; right: 30px; background: rgba(255,255,255,0.9); padding: 10px; border-radius: 50%; box-shadow: 0 5px 15px rgba(0,0,0,0.2); border: 1px solid var(--accent); z-index: 99; }
+    .play-btn { width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--primary); color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; }
   </style>
 </head>
 
 <body class="device-mobile-optimized">
-  
-  <div class="music-player" id="playerWidget" style="display:none;"> <button class="play-btn" onclick="toggleMusic()">♫</button>
-  </div>
+  <audio id="bgMusic" loop><source src="lofcosmos-midnight-notes-lofi-272341.mp3" type="audio/mpeg"></audio>
+  <div class="music-player"><button class="play-btn" onclick="toggleMusic()" id="playBtn">▶</button></div>
 
   <div id="SITE_CONTAINER">
     <header id="SITE_HEADER" class="SITE_HEADER wixui-header">
@@ -116,20 +69,16 @@
             <h2>Nuestra Esencia</h2>
          </div>
       </div>
-
       <div class="story-container">
         <div class="story-text">
           <p><span style="font-size: 40px; float: left; margin-right: 10px; line-height: 40px; color: var(--accent); font-family: 'Playfair Display', serif;">T</span>odo comenzó con una conversación entre <strong>cuatro grandes amigos</strong>. Compartíamos risas, sueños y, sobre todo, una visión común: crear un refugio en medio del caos de la ciudad, un lugar donde las personas pudieran detener el tiempo y reencontrarse consigo mismas.</p>
           <p>Lo que empezó como una idea en una tarde de café, poco a poco tomó forma. Con esfuerzo, dedicación y la unión de nuestros talentos, nació <strong>Oasis Urbano Spa</strong>. Queríamos más que un simple centro de belleza; queríamos construir una experiencia de bienestar integral en Cochabamba.</p>
         </div>
-
         <div class="highlight-box">
           <h3 style="color: var(--primary);">Pasión y Profesionalismo</h3>
           <p style="margin-bottom: 0;">Aunque el camino del emprendimiento tiene muchas etapas, el corazón de Oasis Urbano late más fuerte que nunca gracias al liderazgo de nuestras especialistas.</p>
         </div>
-
         <h3 style="text-align: center; font-size: 36px; margin-top: 60px; color: var(--accent);">Nuestras Expertas</h3>
-        
         <div class="team-highlight">
           <div class="member">
             <div class="member-initial">L</div>
@@ -152,8 +101,6 @@
     </footer>
   </div>
   
-  <audio id="bgMusic" loop crossorigin="anonymous"><source src="https://ia800504.us.archive.org/33/items/ErikSatieGymnopedieNo1/ErikSatieGymnopedieNo1.mp3" type="audio/mpeg"></audio>
-  <div class="music-player" id="playerWidget"><button class="play-btn" onclick="toggleMusic()" id="playBtn">▶</button></div>
   <script>
     var music = document.getElementById("bgMusic"); var btn = document.getElementById("playBtn"); var isPlaying = false; music.volume = 0.5;
     function toggleMusic() { if (isPlaying) { music.pause(); btn.innerHTML = "▶"; isPlaying = false; } else { music.play(); btn.innerHTML = "❚❚"; isPlaying = true; } }
