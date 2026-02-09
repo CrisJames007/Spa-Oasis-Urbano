@@ -59,56 +59,67 @@
     }
     nav ul li a:hover::after { width: 100%; }
 
-    /* --- NUEVA SECCIÓN HERO (Fondo Monstera Difuso) --- */
+    /* --- HERO SECTION (Fondo Monstera Difuso) --- */
     .hero-section-monstera {
       position: relative;
-      min-height: 600px; /* Altura imponente */
+      height: 80vh; /* Ocupa el 80% de la altura de la pantalla */
+      min-height: 600px;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      background-color: var(--primary); /* Color de fondo por si falla la imagen */
+      background-color: var(--primary);
     }
 
-    /* Pseudo-elemento para la imagen de fondo y efectos */
+    /* Imagen de fondo procesada con CSS */
     .hero-section-monstera::before {
         content: '';
         position: absolute;
         top: 0; left: 0; right: 0; bottom: 0;
-        /* Imagen de Costilla de Adán (Monstera) de alta calidad */
+        /* Imagen de alta calidad de hojas Monstera */
         background-image: url('https://images.unsplash.com/photo-1598537115691-294049682355?q=80&w=1920&auto=format&fit=crop');
         background-size: cover;
         background-position: center;
-        /* Efectos: Desenfoque + Oscurecido + Tinte Verde */
-        filter: blur(6px) brightness(0.6); 
-        background-color: rgba(27, 75, 67, 0.5); /* Tinte verde sobre la imagen */
-        background-blend-mode: multiply; /* Mezcla la imagen con el tinte */
+        /* EFECTOS: Desenfoque + Oscurecido */
+        filter: blur(4px) brightness(0.55); 
+        transform: scale(1.05); /* Escala para evitar bordes blancos por el blur */
         z-index: 0;
-        transform: scale(1.05); /* Evita bordes blancos por el blur */
     }
 
     .hero-text-box {
-      /* Caja de texto con efecto vidrio */
-      background: rgba(27, 75, 67, 0.7); /* Un poco más transparente ahora */
-      backdrop-filter: blur(10px);
-      padding: 60px;
-      border: 1px solid var(--accent);
-      color: var(--text-light);
-      max-width: 600px;
-      text-align: center;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      /* Caja de texto flotante */
       position: relative;
-      z-index: 1; /* Asegura que el texto quede sobre el fondo */
+      z-index: 2;
+      background: rgba(27, 75, 67, 0.6); /* Verde semi-transparente */
+      backdrop-filter: blur(10px); /* Efecto vidrio */
+      padding: 60px;
+      border: 1px solid rgba(197, 160, 89, 0.5); /* Borde dorado sutil */
+      color: var(--text-light);
+      max-width: 700px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      border-radius: 4px;
     }
-    .hero-text-box h2 { color: var(--accent); font-size: 52px; margin-bottom: 15px; font-style: italic; }
-    .hero-text-box p { color: #e0e0e0; font-size: 18px; font-weight: 300; }
+    .hero-text-box h2 { 
+      color: var(--accent); 
+      font-size: 56px; 
+      margin-bottom: 20px; 
+      font-style: italic;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    .hero-text-box p { 
+      color: #f0f0f0; 
+      font-size: 20px; 
+      font-weight: 300; 
+      letter-spacing: 0.5px;
+    }
 
     /* --- BOTONES CREATIVOS --- */
     .btn-creative {
       position: relative;
       background-color: var(--accent);
       color: var(--text-light) !important;
-      padding: 16px 40px;
+      padding: 18px 45px;
       font-family: 'Playfair Display', serif;
       font-size: 18px;
       letter-spacing: 1px;
@@ -116,10 +127,12 @@
       overflow: hidden;
       display: inline-block;
       cursor: pointer;
-      margin-top: 25px;
+      margin-top: 30px;
       z-index: 1;
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      border-radius: 2px;
     }
+    /* Efecto de brillo (hover) */
     .btn-creative::before {
       content: '';
       position: absolute;
@@ -132,31 +145,34 @@
     .btn-creative:hover::before { left: 100%; }
     .btn-creative:hover {
       background-color: #b08d4b;
-      box-shadow: 0 0 20px var(--accent);
-      transform: translateY(-2px);
+      box-shadow: 0 0 25px rgba(197, 160, 89, 0.6);
+      transform: translateY(-3px);
     }
 
     /* --- REPRODUCTOR DE MÚSICA --- */
     .music-player {
       position: fixed; bottom: 30px; right: 30px;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 12px 20px; border-radius: 50px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 12px 25px; border-radius: 50px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
       display: flex; align-items: center; gap: 15px;
-      border: 2px solid var(--accent); z-index: 9999;
+      border: 1px solid var(--accent); z-index: 9999;
       backdrop-filter: blur(10px); transition: transform 0.3s;
     }
     .music-player:hover { transform: scale(1.05); }
     .play-btn {
       background: var(--primary); color: white; border: none;
-      width: 35px; height: 35px; border-radius: 50%;
+      width: 40px; height: 40px; border-radius: 50%;
       cursor: pointer; display: flex; align-items: center; justify-content: center;
       font-size: 16px; transition: 0.3s; outline: none;
     }
-    .play-btn:hover { background: var(--accent); }
-    .music-label { font-family: 'Playfair Display', serif; font-size: 13px; color: var(--primary); font-weight: bold; }
+    .play-btn:hover { background: var(--accent); transform: rotate(10deg); }
+    .music-info { display: flex; flex-direction: column; }
+    .music-label { font-family: 'Playfair Display', serif; font-size: 14px; color: var(--primary); font-weight: bold; }
+    .music-status { font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 1px;}
+    
     .sound-wave { display: flex; gap: 3px; height: 15px; align-items: flex-end; }
-    .bar { width: 2px; background: var(--accent); animation: wave 1s infinite ease-in-out; animation-play-state: paused; }
+    .bar { width: 3px; background: var(--accent); animation: wave 1s infinite ease-in-out; animation-play-state: paused; }
     .bar:nth-child(2) { animation-delay: 0.1s; height: 60%; }
     .bar:nth-child(3) { animation-delay: 0.2s; height: 30%; }
     @keyframes wave { 0%, 100% { height: 20%; } 50% { height: 100%; } }
@@ -176,13 +192,14 @@
 <body class="device-mobile-optimized">
   
   <audio id="bgMusic" loop crossorigin="anonymous">
-    <source src="https://cdn.pixabay.com/download/audio/2022/03/09/audio_822772623a.mp3?filename=meditation-impromptu-01-120288.mp3" type="audio/mpeg">
+    <source src="https://ia800504.us.archive.org/33/items/ErikSatieGymnopedieNo1/ErikSatieGymnopedieNo1.mp3" type="audio/mpeg">
   </audio>
 
   <div class="music-player" id="playerWidget">
     <button class="play-btn" onclick="toggleMusic()" id="playBtn">▶</button>
     <div class="music-info">
-      <div class="music-label">Ambiente Spa</div>
+      <span class="music-label">Modo Zen</span>
+      <span class="music-status" id="musicStatus">Pausado</span>
     </div>
     <div class="sound-wave" id="soundWave">
       <div class="bar" style="height: 40%"></div>
@@ -231,7 +248,7 @@
         <section style="background-color: var(--secondary); padding: 80px 20px; text-align: center;">
            <h3 style="font-size: 38px; margin-bottom: 20px;">Bienvenido a tu Oasis</h3>
            <p style="max-width: 700px; margin: 0 auto 50px auto; font-size: 18px;">
-             Ubicados en la tranquila zona de <strong>Sarcobamba</strong>, hemos creado un espacio donde el tiempo se detiene para que reconectes cuerpo y mente.
+             Ubicados en la tranquila zona de <strong>Sarcobamba</strong>, hemos creado un espacio donde el tiempo se detiene.
            </p>
 
            <div style="border-top: 1px solid #ccc; padding-top: 50px; max-width: 900px; margin: 0 auto;">
@@ -257,7 +274,7 @@
       <div style="margin-bottom: 30px; font-size: 15px; line-height: 1.8;">
         <p><strong>Dirección:</strong><br>Calle Yuracaré Esq. Av. Thunupa<br>Zona Sarcobamba, Cochabamba</p>
         <br>
-        <p><strong>Reservas y Consultas:</strong><br>
+        <p><strong>Reservas:</strong><br>
           <a href="https://wa.me/59178887983" target="_blank">788-87983 (WhatsApp)</a>
         </p>
       </div>
@@ -272,30 +289,36 @@
     var music = document.getElementById("bgMusic");
     var btn = document.getElementById("playBtn");
     var wave = document.getElementById("soundWave");
+    var statusText = document.getElementById("musicStatus");
     var isPlaying = false;
 
-    // Intentar establecer volumen inicial (algunos navegadores lo ignoran)
-    music.volume = 0.6;
+    // Volumen suave inicial
+    music.volume = 0.5;
 
     function toggleMusic() {
       if (isPlaying) {
         music.pause();
         btn.innerHTML = "▶";
         wave.classList.remove("playing");
+        statusText.innerText = "Pausado";
         isPlaying = false;
       } else {
-        // Promesa para manejar errores de reproducción
+        // Indicador de carga
+        statusText.innerText = "Cargando...";
         var playPromise = music.play();
+
         if (playPromise !== undefined) {
           playPromise.then(_ => {
-            // Reproducción iniciada correctamente
-            btn.innerHTML = "❚❚";
+            // Éxito
+            btn.innerHTML = "❚❚"; // Icono Pausa
             wave.classList.add("playing");
+            statusText.innerText = "Reproduciendo";
             isPlaying = true;
           })
           .catch(error => {
-            console.log("Error al reproducir audio:", error);
-            alert("No se pudo reproducir la música automáticamente. Por favor, verifica la configuración de sonido de tu navegador.");
+            console.error("Error de reproducción:", error);
+            statusText.innerText = "Error (Click de nuevo)";
+            alert("El navegador bloqueó la música automática. Por favor haz click en el botón de Play nuevamente.");
           });
         }
       }
