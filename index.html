@@ -2,20 +2,17 @@
 <html lang="es">
 <head>
   <meta charset='utf-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Spa Oasis Urbano | Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oasis Urbano Spa | Inicio</title>
   
-  <link rel="icon" sizes="192x192" href="../static.wixstatic.com/shapes/0f001e_ac31e9bd2e4f41b7afe7d296054d36cc.svg" type="image/svg+xml"/>
-  <link rel="shortcut icon" href="../static.wixstatic.com/shapes/0f001e_ac31e9bd2e4f41b7afe7d296054d36cc.svg" type="image/svg+xml"/>
-  
-  <style>@font-face {font-family: 'cormorantgaramond-semibold'; font-style: italic; font-weight: 700; src: url('../static.parastorage.com/fonts/v2/2b314759-ac8f-48f7-9f7c-e863778ad50d/v1/cormorantgaramond.woff2') format('woff2');}</style>
-  <style data-url="../static.parastorage.com/services/wix-thunderbolt/dist/main.46d95940.min.css">/* ... (Layout CSS) ... */ :root{--one-unit:1vw;--section-max-width:9999px;}</style>
-  <style data-url="../static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.25146d00.min.css">/* ... (Renderer CSS) ... */ body{font-family:Arial,Helvetica,sans-serif;}</style>
-  
-  <style>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="icon" sizes="192x192" href="static.wixstatic.com/shapes/0f001e_ac31e9bd2e4f41b7afe7d296054d36cc.svg" type="image/svg+xml"/>
+  <link rel="shortcut icon" href="static.wixstatic.com/shapes/0f001e_ac31e9bd2e4f41b7afe7d296054d36cc.svg" type="image/svg+xml"/>
 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <style data-url="static.parastorage.com/services/wix-thunderbolt/dist/main.46d95940.min.css">/* ... */ :root{--one-unit:1vw;--section-max-width:9999px;}</style>
+  <style data-url="static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.25146d00.min.css">/* ... */ body{font-family:Arial,Helvetica,sans-serif;}</style>
+  
   <style>
     /* VARIABLES DE COLOR - EL ALMA DEL OASIS */
     :root {
@@ -43,6 +40,8 @@
       margin-top: 0;
     }
 
+    p { font-size: 16px; color: #4a4a4a; }
+
     a { text-decoration: none; transition: 0.3s; }
 
     /* HEADER / MENÚ */
@@ -59,14 +58,16 @@
       letter-spacing: 1.5px;
       text-transform: uppercase;
       font-weight: 700;
+      border-bottom: 2px solid transparent;
     }
     nav ul li a:hover {
-      color: var(--accent) !important; /* Se pone dorado al pasar el mouse */
+      color: var(--accent) !important;
+      border-bottom: 2px solid var(--accent);
     }
 
     /* SECCIÓN HERO (Imagen Principal) */
     .hero-text-box {
-      background-color: rgba(27, 75, 67, 0.85); /* Verde con transparencia */
+      background-color: rgba(27, 75, 67, 0.9); /* Verde con transparencia */
       padding: 50px;
       border: 1px solid var(--accent); /* Borde dorado fino */
       color: var(--text-light);
@@ -76,9 +77,10 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
-    .hero-text-box h2 { color: var(--accent); } /* Título dorado */
-    .hero-text-box p { color: #f0f0f0; }
+    .hero-text-box h2 { color: var(--accent); font-size: 48px; margin-bottom: 15px; } 
+    .hero-text-box p { color: #f0f0f0; font-size: 18px; margin-bottom: 30px; }
 
     /* BOTONES ELEGANTES */
     .btn-elegant {
@@ -88,44 +90,48 @@
       font-family: 'Playfair Display', serif;
       font-style: italic;
       font-size: 18px;
-      border-radius: 2px; /* Bordes poco redondeados son más elegantes */
+      border-radius: 2px;
       display: inline-block;
-      margin-top: 20px;
       border: 1px solid var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
     .btn-elegant:hover {
       background-color: transparent;
       color: var(--accent) !important;
     }
 
-    /* TARJETAS (Equipo, Servicios) */
-    .team-card, .service-category {
+    /* SECCIONES Y TARJETAS */
+    .section-bg { background-color: var(--secondary); padding: 80px 20px; text-align: center; }
+
+    .team-card {
       background: var(--bg-white);
-      border-top: 4px solid var(--primary); /* Detalle verde arriba */
+      border-top: 4px solid var(--primary);
       padding: 30px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave de alta calidad */
+      margin: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      display: inline-block;
+      width: 280px;
+      vertical-align: top;
+      text-align: center;
       transition: transform 0.3s ease;
     }
-    .team-card:hover {
-      transform: translateY(-5px); /* Se levanta un poco al pasar el mouse */
-    }
-    
-    /* LISTAS DE SERVICIOS */
-    .service-list li::before {
-      content: "✦"; /* Cambiamos el check por una estrella/diamante */
-      color: var(--accent);
-      position: absolute;
-      left: 0;
-      font-size: 18px;
-    }
+    .team-card:hover { transform: translateY(-5px); }
+    .team-card h5 { font-size: 22px; margin-bottom: 5px; }
+    .team-role { color: var(--accent); font-style: italic; font-weight: bold; font-family: 'Playfair Display', serif; }
 
     /* FOOTER */
     .wixui-footer {
       background-color: var(--primary) !important;
       color: var(--secondary) !important;
       border-top: 5px solid var(--accent);
+      padding: 60px 20px;
+      text-align: center;
     }
-    .wixui-footer a { color: var(--accent) !important; }
+    .wixui-footer h4 { color: var(--accent); font-size: 28px; }
+    .wixui-footer p, .wixui-footer strong { color: #d0d0d0; }
+    .wixui-footer a { color: var(--accent) !important; font-weight: bold; }
+
   </style>
 </head>
 
@@ -134,19 +140,19 @@
     
     <header id="SITE_HEADER" class="SITE_HEADER wixui-header">
       <div class="comp-kriwpvah">
-        <div data-testid="inline-content" style="text-align: center; padding-top: 20px;">
-           <h1 style="font-family: 'cormorantgaramond-semibold', serif; font-size: 36px; color: #151945; margin: 0;">
-             Spa Oasis Urbano
+        <div data-testid="inline-content" style="text-align: center; padding-top: 30px;">
+           <h1 style="font-size: 42px; margin: 0; letter-spacing: 1px;">
+             Oasis Urbano Spa
            </h1>
-           <p style="font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #666;">Cochabamba</p>
+           <p style="font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-top: 5px;">Cochabamba</p>
         </div>
         
         <nav aria-label="Site" class="wixui-horizontal-menu">
-           <ul style="display: flex; justify-content: center; list-style: none; padding: 20px 0; gap: 30px; font-family: sans-serif;">
-             <li><a href="index.html" style="text-decoration: none; color: #333; font-weight: bold;">Inicio</a></li>
-             <li><a href="about.html" style="text-decoration: none; color: #333;">Nosotros</a></li>
-             <li><a href="treatements.html" style="text-decoration: none; color: #333;">Tratamientos</a></li>
-             <li><a href="contact.html" style="text-decoration: none; color: #333;">Contacto</a></li>
+           <ul style="display: flex; justify-content: center; list-style: none; padding: 25px 0; gap: 40px;">
+             <li><a href="index.html" style="border-bottom: 2px solid var(--accent);">Inicio</a></li>
+             <li><a href="about.html">Nosotros</a></li>
+             <li><a href="treatments.html">Tratamientos</a></li>
+             <li><a href="contact.html">Contacto</a></li>
            </ul>
         </nav>
       </div>
@@ -157,39 +163,38 @@
         
         <section id="comp-maufm0bj" class="wixui-section" style="position: relative;">
           <div class="MW5IWV">
-            <img src="../static.wixstatic.com/media/0f001e_4294a86fea3d4dbd92f7c7f5ffa03a69_mv2.jpg/v1/fill/w_980,h_600,al_c,q_85/hero-image.jpg" alt="Spa Relax" style="width: 100%; height: auto; min-height: 400px; object-fit: cover; display: block;">
+            <img src="static.wixstatic.com/media/0f001e_4294a86fea3d4dbd92f7c7f5ffa03a69_mv2.jpg/v1/fill/w_980,h_600,al_c,q_85/hero-image.jpg" alt="Spa Relax" style="width: 100%; height: auto; min-height: 500px; object-fit: cover; display: block;">
           </div>
           
-          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; background: rgba(0,0,0,0.4); padding: 40px; width: 80%; max-width: 600px;">
-            <h2 style="font-size: 50px; font-family: 'cormorantgaramond-semibold', serif; margin-bottom: 10px;">Renueva tu Energía</h2>
-            <p style="font-size: 18px; margin-bottom: 25px;">Tu refugio de bienestar en Zona Sarcobamba</p>
-            <a href="tel:78887983" style="background-color: #fff; color: #151945; padding: 12px 30px; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">
-              Reservar: +591 78887983
+          <div class="hero-text-box">
+            <h2>Renueva tu Energía</h2>
+            <p>Tu refugio de bienestar exclusivo en Zona Sarcobamba</p>
+            <a href="tel:78887983" class="btn-elegant">
+              Reservar Cita
             </a>
           </div>
         </section>
 
-        <section style="padding: 60px 20px; text-align: center; background-color: #fafafa;">
-           <h3 style="font-size: 32px; margin-bottom: 20px; font-family: 'cormorantgaramond-semibold', serif; color: #151945;">
-             Bienvenido a Spa Oasis Urbano
-           </h3>
-           <p style="max-width: 700px; margin: 0 auto 40px auto; line-height: 1.6; font-size: 18px; color: #444;">
-             Ubicados en la tranquila zona de <strong>Sarcobamba</strong>, ofrecemos un espacio diseñado para desconectar de la rutina y reconectar contigo mismo.
+        <section class="section-bg">
+           <h3 style="font-size: 38px; margin-bottom: 20px;">Bienvenido a tu Oasis</h3>
+           <p style="max-width: 700px; margin: 0 auto 50px auto; font-size: 18px;">
+             Ubicados en la tranquila zona de <strong>Sarcobamba</strong>, hemos creado un espacio donde el tiempo se detiene. 
+             Permítenos cuidar de ti y reconectar tu cuerpo con tu mente.
            </p>
 
-           <div style="border-top: 1px solid #ddd; padding-top: 40px; max-width: 800px; margin: 0 auto;">
-             <h4 style="margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; color: #888;">Profesionales a tu servicio</h4>
+           <div style="border-top: 1px solid #ccc; padding-top: 50px; max-width: 900px; margin: 0 auto;">
+             <h4 style="margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; font-size: 14px; color: #888;">Nuestras Especialistas</h4>
              
              <div class="team-card">
-               <h5 style="margin: 10px 0 5px 0; font-size: 20px;">Lila Saigua Gonzalo</h5>
+               <h5>Lila Saigua Gonzalo</h5>
                <p class="team-role">Experta Fisioterapeuta</p>
-               <p style="font-size: 14px; margin-top: 10px;">Especialista en recuperación física y Tratamientos Corporales - Esteticos.</p>
+               <p style="font-size: 14px; margin-top: 15px;">Especialista en recuperación física y masajes terapéuticos profundos.</p>
              </div>
 
              <div class="team-card">
-               <h5 style="margin: 10px 0 5px 0; font-size: 20px;">Nicole Mallon</h5>
+               <h5>Nicole Mallon</h5>
                <p class="team-role">Manicurista Profesional</p>
-               <p style="font-size: 14px; margin-top: 10px;">Cuidado estético y diseño de uñas con las últimas tendencias.</p>
+               <p style="font-size: 14px; margin-top: 15px;">Arte y cuidado estético con las últimas tendencias en diseño de uñas.</p>
              </div>
            </div>
         </section>
@@ -197,14 +202,14 @@
       </div>
     </main>
 
-    <footer id="SITE_FOOTER" class="wixui-footer" style="background: #151945; color: #fff; padding: 50px 20px; text-align: center; margin-top: auto;">
-      <h4 style="font-family: 'cormorantgaramond-semibold', serif; font-size: 24px; margin-bottom: 20px;">Oasis Urbano Spa</h4>
+    <footer id="SITE_FOOTER" class="wixui-footer">
+      <h4>Oasis Urbano Spa</h4>
       
       <div style="margin-bottom: 30px; font-size: 15px; line-height: 1.8;">
         <p><strong>Dirección:</strong><br>Calle Yuracaré Esq. Av. Thunupa<br>Zona Sarcobamba, Cochabamba</p>
         <br>
         <p><strong>Reservas y Consultas:</strong><br>
-          <a href="tel:78887983" style="color: #B7BDEF; text-decoration: none; font-size: 18px;">788-87983</a>
+          <a href="tel:78887983">788-87983</a>
         </p>
       </div>
       
@@ -216,4 +221,3 @@
   </div>
 </body>
 </html>
-
