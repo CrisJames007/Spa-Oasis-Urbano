@@ -14,49 +14,118 @@
   <style data-url="../static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.25146d00.min.css">/* ... (Renderer CSS) ... */ body{font-family:Arial,Helvetica,sans-serif;}</style>
   
   <style>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* VARIABLES DE COLOR - EL ALMA DEL OASIS */
     :root {
-      --primary-color: #151945;
-      --accent-color: #B7BDEF;
+      --primary: #1B4B43;    /* Verde Oasis Profundo */
+      --secondary: #F2EFE9;  /* Arena/Crema suave */
+      --accent: #C5A059;     /* Dorado Mate Elegante */
+      --text-dark: #2C3531;  /* Gris oscuro casi negro */
+      --text-light: #FFFFFF;
+      --bg-white: #FFFFFF;
     }
-    .service-category {
-      margin-bottom: 40px;
-      padding: 20px;
-      background: #fff;
-      border-left: 4px solid var(--primary-color);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    .category-title {
-      font-family: 'cormorantgaramond-semibold', serif;
-      font-size: 28px;
-      color: var(--primary-color);
-      margin-bottom: 15px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .service-list {
-      list-style: none;
+
+    /* LIMPIEZA GENERAL */
+    body {
+      font-family: 'Lato', sans-serif; /* Texto limpio para leer */
+      background-color: var(--secondary); /* Fondo general color arena suave */
+      color: var(--text-dark);
+      margin: 0;
       padding: 0;
-      columns: 2; /* Divide la lista en 2 columnas en pantallas grandes */
-      -webkit-columns: 2;
-      -moz-columns: 2;
+      line-height: 1.6;
     }
-    .service-list li {
-      margin-bottom: 10px;
-      padding-left: 20px;
-      position: relative;
-      font-size: 16px;
-      color: #555;
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', serif; /* Títulos elegantes */
+      color: var(--primary);
+      margin-top: 0;
     }
+
+    a { text-decoration: none; transition: 0.3s; }
+
+    /* HEADER / MENÚ */
+    .SITE_HEADER {
+      background-color: var(--bg-white);
+      box-shadow: 0 2px 15px rgba(27, 75, 67, 0.08); /* Sombra verde muy sutil */
+      padding-bottom: 10px;
+    }
+    
+    /* Enlaces del menú */
+    nav ul li a {
+      color: var(--primary) !important;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    nav ul li a:hover {
+      color: var(--accent) !important; /* Se pone dorado al pasar el mouse */
+    }
+
+    /* SECCIÓN HERO (Imagen Principal) */
+    .hero-text-box {
+      background-color: rgba(27, 75, 67, 0.85); /* Verde con transparencia */
+      padding: 50px;
+      border: 1px solid var(--accent); /* Borde dorado fino */
+      color: var(--text-light);
+      max-width: 600px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .hero-text-box h2 { color: var(--accent); } /* Título dorado */
+    .hero-text-box p { color: #f0f0f0; }
+
+    /* BOTONES ELEGANTES */
+    .btn-elegant {
+      background-color: var(--accent);
+      color: var(--text-light) !important;
+      padding: 15px 35px;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 18px;
+      border-radius: 2px; /* Bordes poco redondeados son más elegantes */
+      display: inline-block;
+      margin-top: 20px;
+      border: 1px solid var(--accent);
+    }
+    .btn-elegant:hover {
+      background-color: transparent;
+      color: var(--accent) !important;
+    }
+
+    /* TARJETAS (Equipo, Servicios) */
+    .team-card, .service-category {
+      background: var(--bg-white);
+      border-top: 4px solid var(--primary); /* Detalle verde arriba */
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave de alta calidad */
+      transition: transform 0.3s ease;
+    }
+    .team-card:hover {
+      transform: translateY(-5px); /* Se levanta un poco al pasar el mouse */
+    }
+    
+    /* LISTAS DE SERVICIOS */
     .service-list li::before {
-      content: "✔";
-      color: var(--accent-color);
+      content: "✦"; /* Cambiamos el check por una estrella/diamante */
+      color: var(--accent);
       position: absolute;
       left: 0;
-      font-weight: bold;
+      font-size: 18px;
     }
-    @media (max-width: 600px) {
-      .service-list { columns: 1; }
+
+    /* FOOTER */
+    .wixui-footer {
+      background-color: var(--primary) !important;
+      color: var(--secondary) !important;
+      border-top: 5px solid var(--accent);
     }
+    .wixui-footer a { color: var(--accent) !important; }
   </style>
 </head>
 
@@ -171,4 +240,5 @@
   </div>
 </body>
 </html>
+
 
