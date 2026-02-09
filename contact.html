@@ -2,205 +2,123 @@
 <html lang="es">
 <head>
   <meta charset='utf-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Spa Oasis Urbano | Contacto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oasis Urbano Spa | Contacto</title>
   
-  <link rel="icon" sizes="192x192" href="../static.wixstatic.com/shapes/0f001e_ac31e9bd2e4f41b7afe7d296054d36cc.svg" type="image/svg+xml"/>
-  <link rel="shortcut icon" href="../static.wixstatic.com/shapes/0f001e_ac31e9bd2e4f41b7afe7d296054d36cc.svg" type="image/svg+xml"/>
+  <link rel="icon" sizes="192x192" href="static.wixstatic.com/shapes/0f001e_ac31e9bd2e4f41b7afe7d296054d36cc.svg" type="image/svg+xml"/>
+  <link rel="shortcut icon" href="static.wixstatic.com/shapes/0f001e_ac31e9bd2e4f41b7afe7d296054d36cc.svg" type="image/svg+xml"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   
-  <style>@font-face {font-family: 'cormorantgaramond-semibold'; font-style: italic; font-weight: 700; src: url('../static.parastorage.com/fonts/v2/2b314759-ac8f-48f7-9f7c-e863778ad50d/v1/cormorantgaramond.woff2') format('woff2');}</style>
-  <style data-url="../static.parastorage.com/services/wix-thunderbolt/dist/main.46d95940.min.css">/* ... (Layout CSS) ... */ :root{--one-unit:1vw;--section-max-width:9999px;}</style>
-  <style data-url="../static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.25146d00.min.css">/* ... (Renderer CSS) ... */ body{font-family:Arial,Helvetica,sans-serif;}</style>
+  <style data-url="static.parastorage.com/services/wix-thunderbolt/dist/main.46d95940.min.css">/* ... */ :root{--one-unit:1vw;--section-max-width:9999px;}</style>
+  <style data-url="static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.25146d00.min.css">/* ... */ body{font-family:Arial,Helvetica,sans-serif;}</style>
   
   <style>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    :root { --primary: #1B4B43; --secondary: #F2EFE9; --accent: #C5A059; --text-dark: #2C3531; --bg-white: #FFFFFF; }
+    body { font-family: 'Lato', sans-serif; background-color: var(--secondary); color: var(--text-dark); margin: 0; padding: 0; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--primary); }
+    a { text-decoration: none; transition: 0.4s ease; }
 
-  <style>
-    /* VARIABLES DE COLOR - EL ALMA DEL OASIS */
-    :root {
-      --primary: #1B4B43;    /* Verde Oasis Profundo */
-      --secondary: #F2EFE9;  /* Arena/Crema suave */
-      --accent: #C5A059;     /* Dorado Mate Elegante */
-      --text-dark: #2C3531;  /* Gris oscuro casi negro */
-      --text-light: #FFFFFF;
-      --bg-white: #FFFFFF;
-    }
+    /* HEADER */
+    .SITE_HEADER { background-color: var(--bg-white); box-shadow: 0 4px 20px rgba(27, 75, 67, 0.05); }
+    nav ul li a { color: var(--primary) !important; font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; position: relative; }
+    nav ul li a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--accent); transition: width 0.3s; }
+    nav ul li a:hover::after { width: 100%; }
 
-    /* LIMPIEZA GENERAL */
-    body {
-      font-family: 'Lato', sans-serif; /* Texto limpio para leer */
-      background-color: var(--secondary); /* Fondo general color arena suave */
-      color: var(--text-dark);
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-
-    h1, h2, h3, h4, h5 {
-      font-family: 'Playfair Display', serif; /* Títulos elegantes */
-      color: var(--primary);
-      margin-top: 0;
-    }
-
-    a { text-decoration: none; transition: 0.3s; }
-
-    /* HEADER / MENÚ */
-    .SITE_HEADER {
-      background-color: var(--bg-white);
-      box-shadow: 0 2px 15px rgba(27, 75, 67, 0.08); /* Sombra verde muy sutil */
-      padding-bottom: 10px;
+    /* GRID CONTACTO */
+    .contact-wrapper { display: flex; flex-wrap: wrap; max-width: 1100px; margin: 60px auto; box-shadow: 0 20px 50px rgba(0,0,0,0.1); background: white; }
+    
+    .contact-info { flex: 1; min-width: 300px; background-color: var(--primary); color: white; padding: 60px 40px; position: relative; overflow: hidden; }
+    .contact-info::before {
+       /* Decoración hoja sutil */
+       content: ''; position: absolute; bottom: -50px; right: -50px; width: 200px; height: 200px;
+       background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%;
     }
     
-    /* Enlaces del menú */
-    nav ul li a {
-      color: var(--primary) !important;
-      font-size: 14px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-    nav ul li a:hover {
-      color: var(--accent) !important; /* Se pone dorado al pasar el mouse */
-    }
-
-    /* SECCIÓN HERO (Imagen Principal) */
-    .hero-text-box {
-      background-color: rgba(27, 75, 67, 0.85); /* Verde con transparencia */
-      padding: 50px;
-      border: 1px solid var(--accent); /* Borde dorado fino */
-      color: var(--text-light);
-      max-width: 600px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-    .hero-text-box h2 { color: var(--accent); } /* Título dorado */
-    .hero-text-box p { color: #f0f0f0; }
-
-    /* BOTONES ELEGANTES */
-    .btn-elegant {
-      background-color: var(--accent);
-      color: var(--text-light) !important;
-      padding: 15px 35px;
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 18px;
-      border-radius: 2px; /* Bordes poco redondeados son más elegantes */
-      display: inline-block;
-      margin-top: 20px;
-      border: 1px solid var(--accent);
-    }
-    .btn-elegant:hover {
-      background-color: transparent;
-      color: var(--accent) !important;
-    }
-
-    /* TARJETAS (Equipo, Servicios) */
-    .team-card, .service-category {
-      background: var(--bg-white);
-      border-top: 4px solid var(--primary); /* Detalle verde arriba */
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave de alta calidad */
-      transition: transform 0.3s ease;
-    }
-    .team-card:hover {
-      transform: translateY(-5px); /* Se levanta un poco al pasar el mouse */
-    }
+    .contact-map { flex: 1.5; min-width: 350px; min-height: 500px; position: relative; }
     
-    /* LISTAS DE SERVICIOS */
-    .service-list li::before {
-      content: "✦"; /* Cambiamos el check por una estrella/diamante */
-      color: var(--accent);
-      position: absolute;
-      left: 0;
-      font-size: 18px;
+    .info-item { margin-bottom: 40px; }
+    .info-item h3 { color: var(--accent); font-size: 24px; margin-bottom: 10px; }
+    .info-item p { font-size: 16px; color: #e0e0e0; margin: 5px 0; }
+
+    .btn-whatsapp {
+      display: inline-block; background-color: var(--accent); color: white; padding: 12px 30px;
+      font-family: 'Playfair Display', serif; border: 1px solid var(--accent); margin-top: 10px;
     }
+    .btn-whatsapp:hover { background-color: transparent; color: var(--accent); }
 
     /* FOOTER */
-    .wixui-footer {
-      background-color: var(--primary) !important;
-      color: var(--secondary) !important;
-      border-top: 5px solid var(--accent);
-    }
-    .wixui-footer a { color: var(--accent) !important; }
+    .wixui-footer { background-color: var(--primary) !important; color: var(--secondary) !important; border-top: 5px solid var(--accent); padding: 60px 20px; text-align: center; }
+    
+    /* MUSIC */
+    .music-player { position: fixed; bottom: 30px; right: 30px; background: rgba(255,255,255,0.9); padding: 10px; border-radius: 50%; box-shadow: 0 5px 15px rgba(0,0,0,0.2); border: 1px solid var(--accent); z-index: 99; }
+    .play-btn { width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--primary); color: white; cursor: pointer; }
   </style>
 </head>
 
 <body class="device-mobile-optimized">
   <div id="SITE_CONTAINER">
-    
     <header id="SITE_HEADER" class="SITE_HEADER wixui-header">
       <div class="comp-kriwpvah">
-        <div data-testid="inline-content" style="text-align: center; padding-top: 20px;">
-           <h1 style="font-family: 'cormorantgaramond-semibold', serif; font-size: 36px; color: #151945; margin: 0;">
-             Spa Oasis Urbano
-           </h1>
-           <p style="font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #666;">Contacto</p>
+        <div data-testid="inline-content" style="text-align: center; padding-top: 30px;">
+           <h1 style="font-size: 42px; margin: 0; letter-spacing: 1px;">Oasis Urbano Spa</h1>
+           <p style="font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent);">Cochabamba</p>
         </div>
         <nav aria-label="Site" class="wixui-horizontal-menu">
-           <ul style="display: flex; justify-content: center; list-style: none; padding: 20px 0; gap: 30px; font-family: sans-serif;">
-             <li><a href="index.html" style="text-decoration: none; color: #333;">Inicio</a></li>
-             <li><a href="about.html" style="text-decoration: none; color: #333;">Nosotros</a></li>
-             <li><a href="treatments.html" style="text-decoration: none; color: #333;">Tratamientos</a></li>
-             <li><a href="contact.html" style="text-decoration: none; color: #333; font-weight: bold; border-bottom: 2px solid #B7BDEF;">Contacto</a></li>
+           <ul style="display: flex; justify-content: center; list-style: none; padding: 25px 0; gap: 40px;">
+             <li><a href="index.html">Inicio</a></li>
+             <li><a href="about.html">Nosotros</a></li>
+             <li><a href="treatments.html">Tratamientos</a></li>
+             <li><a href="contact.html" style="border-bottom: 2px solid var(--accent);">Contacto</a></li>
            </ul>
         </nav>
       </div>
     </header>
 
-    <main id="PAGES_CONTAINER" tabindex="-1" style="padding: 20px;">
+    <main id="PAGES_CONTAINER" tabindex="-1">
       
-      <div class="contact-grid">
-        
+      <div class="contact-wrapper">
         <div class="contact-info">
+          <h2 style="color: white; font-size: 36px; margin-bottom: 40px;">Visítanos</h2>
+          
           <div class="info-item">
-            <h3>Visítanos</h3>
+            <h3>Dirección</h3>
             <p>Calle Yuracaré Esq. Avenida Thunupa</p>
             <p>Zona Sarcobamba</p>
             <p>Cochabamba, Bolivia</p>
           </div>
           
           <div class="info-item">
-            <h3>Citas y Consultas</h3>
-            <p>¿Lista para relajarte? Escríbenos para agendar tu cita.</p>
-            <p style="font-size: 24px; margin-top: 10px;">788-87983</p>
-            <a href="https://wa.me/59178887983" class="btn-whatsapp" target="_blank">
-              Enviar WhatsApp
-            </a>
+            <h3>Contacto Directo</h3>
+            <p>¿Lista para tu momento de relax?</p>
+            <p style="font-size: 20px; color: white;">788-87983</p>
+            <a href="https://wa.me/59178887983" class="btn-whatsapp" target="_blank">Chat en WhatsApp</a>
           </div>
 
           <div class="info-item">
-            <h3>Horario de Atención</h3>
-            <p>🗓️ Lunes a viernes: 09:00 am – 22:00 pm<p>
-            <p>🗓️ Sábados: 09:00 am – 17:00 pm<p>
-            <p>🗓️ Domingos: 10:00 am – 16:00 pm</p>
+            <h3>Horarios</h3>
+            <p>Lunes a Sábado: Con Cita Previa</p>
             <p>Domingo: Cerrado</p>
           </div>
         </div>
 
         <div class="contact-map">
-          <iframe 
-            width="100%" 
-            height="100%" 
-            frameborder="0" 
-            style="border:0" 
-            src="https://maps.google.com/maps?q=Calle+Yuracaré+y+Avenida+Thunupa,+Cochabamba&output=embed" 
-            allowfullscreen>
-          </iframe>
+          <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.411696568265!2d-66.1820!3d-17.3910!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIzJzI3LjYiUyA2NsKwMTAnNTUuMiJX!5e0!3m2!1ses!2sbo!4v1675200000000!5m2!1ses!2sbo" allowfullscreen></iframe>
         </div>
-
       </div>
 
     </main>
 
-    <footer id="SITE_FOOTER" class="wixui-footer" style="background: #f0f0f0; padding: 20px; text-align: center; color: #666; font-size: 12px;">
-      <p>© 2026 Spa Oasis Urbano.</p>
+    <footer id="SITE_FOOTER" class="wixui-footer">
+      <h4>Oasis Urbano Spa</h4>
+      <p style="font-size: 12px; margin-top: 10px; color: #aaa;">© 2026 Oasis Urbano Spa.</p>
     </footer>
-
   </div>
+
+  <audio id="bgMusic" loop crossorigin="anonymous"><source src="https://ia800504.us.archive.org/33/items/ErikSatieGymnopedieNo1/ErikSatieGymnopedieNo1.mp3" type="audio/mpeg"></audio>
+  <div class="music-player"><button class="play-btn" onclick="toggleMusic()" id="playBtn">▶</button></div>
+  <script>
+    var music = document.getElementById("bgMusic"); var btn = document.getElementById("playBtn"); var isPlaying = false; music.volume = 0.5;
+    function toggleMusic() { if (isPlaying) { music.pause(); btn.innerHTML = "▶"; isPlaying = false; } else { music.play(); btn.innerHTML = "❚❚"; isPlaying = true; } }
+  </script>
 </body>
 </html>
-
